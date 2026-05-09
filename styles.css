@@ -329,7 +329,6 @@ h1 {
 }
 
 .manifesto,
-.levels,
 .final-cta {
   position: relative;
   overflow: hidden;
@@ -372,154 +371,6 @@ h1 {
   font-size: clamp(2.2rem, 6vw, 6.1rem);
   line-height: 0.96;
   text-shadow: 0 0 2rem rgba(255, 214, 109, 0.5), 0 0 5rem rgba(127, 245, 213, 0.22);
-}
-
-.levels {
-  background:
-    linear-gradient(90deg, rgba(255, 214, 109, 0.08), transparent 18%, transparent 82%, rgba(127, 245, 213, 0.08)),
-    radial-gradient(circle at 30% 5%, rgba(127, 245, 213, 0.18), transparent 27rem),
-    radial-gradient(circle at 78% 12%, rgba(255, 141, 168, 0.16), transparent 25rem),
-    #11101d;
-}
-
-.levels > .section-label {
-  text-align: center;
-}
-
-.level-track {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(0.75rem, 1.5vw, 1.15rem);
-  width: min(82rem, 100%);
-  margin: 2.2rem auto 0;
-}
-
-.level-card {
-  position: relative;
-  min-height: clamp(22rem, 36vw, 31rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 1.15rem;
-  border: 1px solid rgba(255, 246, 194, 0.18);
-  border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(8, 7, 12, 0.1), rgba(8, 7, 12, 0.74)),
-    radial-gradient(circle at 50% 18%, rgba(255, 214, 109, 0.22), transparent 48%),
-    #17121a;
-  box-shadow: inset 0 0 2rem rgba(255, 255, 255, 0.04), 0 2rem 5rem rgba(0, 0, 0, 0.34);
-  isolation: isolate;
-  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-}
-
-.level-card:hover {
-  transform: translateY(-0.35rem);
-  border-color: rgba(255, 246, 194, 0.42);
-  box-shadow: inset 0 0 2rem rgba(255, 255, 255, 0.06), 0 2.4rem 5.5rem rgba(0, 0, 0, 0.42);
-}
-
-.level-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background: var(--level-image);
-  background-position: center;
-  background-size: cover;
-  filter: saturate(1.1) contrast(1.06);
-  transform: scale(1.02);
-  transition: transform 520ms ease, filter 520ms ease;
-}
-
-.level-card:hover::before {
-  transform: scale(1.07);
-}
-
-.level-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(10, 8, 16, 0.2), transparent 34%, rgba(10, 8, 16, 0.85) 100%),
-    radial-gradient(circle at 50% 72%, rgba(255, 214, 109, 0.28), transparent 46%);
-}
-
-.level-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
-.level-meta span,
-.level-meta p {
-  margin: 0;
-  color: rgba(255, 250, 240, 0.48);
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.level-meta p {
-  max-width: 9rem;
-  color: rgba(255, 250, 240, 0.64);
-  font-size: 0.62rem;
-  line-height: 1.25;
-  text-align: right;
-}
-
-.level-card h3 {
-  position: relative;
-  z-index: 1;
-  overflow-wrap: anywhere;
-  font-size: clamp(1.9rem, 3.2vw, 3rem);
-  line-height: 1;
-  text-shadow: 0 0 1.4rem rgba(255, 214, 109, 0.68), 0 0 3.5rem rgba(255, 255, 255, 0.24);
-}
-
-.level-fear {
-  --level-image:
-    linear-gradient(180deg, rgba(7, 6, 8, 0.18), rgba(7, 6, 8, 0.8)),
-    url("./assets/aura-pepe-square.jpeg");
-  border-color: rgba(255, 140, 69, 0.24);
-}
-
-.level-fear::before {
-  filter: grayscale(0.75) brightness(0.34) contrast(1.35) saturate(1.25);
-}
-
-.level-hope {
-  --level-image:
-    radial-gradient(circle at 50% 50%, rgba(255, 249, 199, 0.92), rgba(255, 214, 109, 0.56) 18%, transparent 39%),
-    radial-gradient(ellipse at 50% 78%, rgba(255, 246, 194, 0.78), transparent 31%),
-    radial-gradient(ellipse at 22% 38%, rgba(255, 246, 194, 0.7), transparent 26%),
-    radial-gradient(ellipse at 80% 38%, rgba(255, 228, 155, 0.62), transparent 30%),
-    linear-gradient(180deg, #5f86a4 0%, #ffd66d 48%, #31492f 100%);
-}
-
-.level-belief {
-  --level-image: url("./assets/aura-pepe-square.jpeg");
-  border-color: rgba(255, 246, 194, 0.36);
-}
-
-.level-belief::before {
-  filter: saturate(1.28) brightness(1.16) contrast(1.05);
-}
-
-.level-card-final {
-  --level-image:
-    radial-gradient(circle at 50% 50%, rgba(255, 250, 221, 1), rgba(255, 214, 109, 0.76) 12%, transparent 32%),
-    repeating-radial-gradient(circle at 50% 46%, rgba(255, 214, 109, 0.38) 0 1px, transparent 1px 2.3rem),
-    radial-gradient(circle at 18% 12%, rgba(185, 162, 255, 0.6), transparent 20%),
-    radial-gradient(circle at 86% 18%, rgba(127, 245, 213, 0.4), transparent 24%),
-    linear-gradient(135deg, #26345a, #876233 45%, #fff1a8 72%, #4f6e8b);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06)),
-    conic-gradient(from 180deg at 50% 40%, rgba(255, 214, 109, 0.18), rgba(127, 245, 213, 0.2), rgba(255, 141, 168, 0.16), rgba(185, 162, 255, 0.18), rgba(255, 214, 109, 0.18));
-  border-color: rgba(255, 246, 194, 0.42);
 }
 
 .final-cta {
@@ -622,14 +473,6 @@ h1 {
 
   .hero-content {
     margin-top: 9rem;
-  }
-
-  .level-track {
-    grid-template-columns: 1fr;
-  }
-
-  .level-card {
-    min-height: 10rem;
   }
 }
 
